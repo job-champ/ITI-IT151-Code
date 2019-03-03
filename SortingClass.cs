@@ -180,7 +180,7 @@ class sortArray
 		while (low < high)
 		{
 			// do insertion sort if 10 or smaller
-			if(high - low < 10)
+			if(high - low <= 10)
 			{
 				InsertionSort(A, low, high);
 				break;
