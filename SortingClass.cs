@@ -471,7 +471,7 @@ class chapter1
 	{
 		for(int i = 0; i < arr.Length; i++)
 			Console.Write(arr[i] + " ");
-		Console.WriteLine();
+		Console.WriteLine("");
 	}
 
 	// This method loads up the array with random integers
