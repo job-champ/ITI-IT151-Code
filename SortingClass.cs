@@ -177,10 +177,12 @@ class sortArray
 	// Add insertion sort for subproblems of 10 or smaller
 	public static void optimizedQuickSort(int[] A, int low, int high)
 	{
+		const int THRESHOLD = 10;
+
 		while (low < high)
 		{
 			// do insertion sort if 10 or smaller
-			if(high - low <= 10)
+			if(high - low <= THRESHOLD)
 			{
 				InsertionSort(A, low, high);
 				break;
@@ -453,6 +455,8 @@ class chapter1
 		Console.WriteLine("Time of Merge Sort (.NET): " + mergeSortTime);
 
 		Console.WriteLine("Time of Optimized Merge Sort (.NET): " + optimizedMergeSortTime);
+
+		Console.ReadKey();
 
 		//Console.WriteLine("IsHighResolution = " + Stopwatch.IsHighResolution);
 	}
