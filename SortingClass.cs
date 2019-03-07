@@ -56,7 +56,10 @@ class sortArray
 					arr[inner] = arr[inner + 1];
 					arr[inner + 1] = temp;
 				}
+		//Console.WriteLine("During BubbleSort pass {0}: ", -1 * (outer - arr.Length - 1));
+		//chapter1.DisplayNums(arr);
 		}
+		
 	}
 	
 	// Selection Sort Algorithm
@@ -74,6 +77,8 @@ class sortArray
 			temp = arr[outer];
 			arr[outer] = arr[min];
 			arr[min] = temp;
+		//Console.WriteLine("During SelectionSort pass {0}: ", outer + 1);
+		//chapter1.DisplayNums(arr);
 		}
 	}
 	
@@ -93,9 +98,11 @@ class sortArray
 			}
 
 			arr[inner] = temp;
+		//Console.WriteLine("During InsertionSort pass {0}: ", outer);
+		//chapter1.DisplayNums(arr);
 		}
 	}
-
+	
 	// Perform insertion sort on arr[]
 	// Overloaded insertion sort to use with quick sort
 	public static void InsertionSort(int[] arr, int low, int n)
@@ -118,6 +125,9 @@ class sortArray
 			// the right by one position i.e. arr[j+1..i]
 
 			arr[j] = value;
+
+			//Console.WriteLine("Using Insertion Sort pass {0}: ", i);
+			//chapter1.DisplayNums(arr);
 		}
 	}
 	
@@ -125,7 +135,7 @@ class sortArray
 	// to recurse around
 	public static int Partition (int[] a, int low, int high)
 	{
-		// Pick rightmost element as pivot from the array
+		// Pick the rightmost element as pivot from the array
 		int pivot = a[high];
 
 		// elements less than pivot will be pushed to the left of pIndex
@@ -133,7 +143,7 @@ class sortArray
 		// equal elements can go either way
 		int pIndex = low;
 
-		// each time we finds an element less than or equal to pivot,
+		// each time we find an element less than or equal to pivot,
 		// pIndex is incremented and that element would be placed 
 		// before the pivot.
 		for (int i = low; i < high; i++)
@@ -156,7 +166,8 @@ class sortArray
 		// return pIndex (index of pivot element)
 		return pIndex;
 	}
-
+	
+	static int quickSortCounter = 0;
 	// Quick sort recursively on both sides of the pivot
 	public static void QuickSort(int[] a, int low, int high)
 	{
@@ -166,12 +177,17 @@ class sortArray
 
 		// rearrange the elements across pivot
 		int pivot = Partition(a, low, high);
-
+		
 		// recurse on sub-array containing elements less than pivot
 		QuickSort(a, low, pivot - 1);
 
 		// recurse on sub-array containing elements more than pivot
 		QuickSort(a, pivot + 1, high);
+
+		//quickSortCounter++;
+
+		//Console.WriteLine("During QuickSort pass {0}: ", quickSortCounter);
+		//chapter1.DisplayNums(a);
 	}
 	
 	// Add insertion sort for subproblems of 10 or smaller
@@ -199,8 +215,12 @@ class sortArray
 					optimizedQuickSort(A, pivot + 1, high);
 					high = pivot - 1;
 				}
+
 			}
+			
+
 		}
+
 	}
 
 	// Create two halves to sort
@@ -240,6 +260,7 @@ class sortArray
 	    }
 	}
  	
+	static int mergeSortCounter = 0;
 	// Merge the two halves back together recursively
 	public static void MergeSort(int[] input, int left, int right)
 	{
@@ -252,6 +273,10 @@ class sortArray
 	 
 		Merge(input, left, middle, right);
 	    }
+
+	    //mergeSortCounter++;
+	    //Console.WriteLine("During Merge Sort pass {0}: ", mergeSortCounter);
+	    //chapter1.DisplayNums(input);
 	}    
  	
 	// Merge the two halves back together recursively
@@ -271,6 +296,8 @@ class sortArray
 			optimizedMergeSort(input, middle + 1, right);
 		 
 			Merge(input, left, middle, right);
+
+
 		    }
 	}    
 }
@@ -461,13 +488,13 @@ class chapter1
 		//Console.WriteLine("IsHighResolution = " + Stopwatch.IsHighResolution);
 	}
 
-	static void BuildArray(int[] arr) 
+	public static void BuildArray(int[] arr) 
 	{
 		for(int i = 0; i < arr.Length; i++)
 			arr[i] = i;
 	}
 
-	static void DisplayNums(int[] arr) 
+	public static void DisplayNums(int[] arr) 
 	{
 		for(int i = 0; i < arr.Length; i++)
 			Console.Write(arr[i] + " ");
@@ -475,7 +502,7 @@ class chapter1
 	}
 
 	// This method loads up the array with random integers
-      	static void loadArray(int[] arr)
+      	public static void loadArray(int[] arr)
       	{
 		int Min = 0;
 		int Max = arr.Length * 10;
