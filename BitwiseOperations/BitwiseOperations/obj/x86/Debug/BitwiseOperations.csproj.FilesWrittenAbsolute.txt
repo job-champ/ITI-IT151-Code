@@ -1,0 +1,6 @@
+/home/job/Desktop/ITI_Stuff/Code/ITI-IT151-Code/BitwiseOperations/BitwiseOperations/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/job/Desktop/ITI_Stuff/Code/ITI-IT151-Code/BitwiseOperations/BitwiseOperations/obj/x86/Debug/BitwiseOperations.gtk-gui.gui.stetic
+/home/job/Desktop/ITI_Stuff/Code/ITI-IT151-Code/BitwiseOperations/BitwiseOperations/bin/Debug/BitwiseOperations.exe.mdb
+/home/job/Desktop/ITI_Stuff/Code/ITI-IT151-Code/BitwiseOperations/BitwiseOperations/bin/Debug/BitwiseOperations.exe
+/home/job/Desktop/ITI_Stuff/Code/ITI-IT151-Code/BitwiseOperations/BitwiseOperations/obj/x86/Debug/BitwiseOperations.exe
+/home/job/Desktop/ITI_Stuff/Code/ITI-IT151-Code/BitwiseOperations/BitwiseOperations/obj/x86/Debug/BitwiseOperations.exe.mdb
